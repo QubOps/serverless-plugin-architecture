@@ -1,0 +1,25 @@
+service: archtest
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  logRetentionInDays: 7
+  # Can be set at provider level
+  architecture: arm64
+
+package:
+  excludeDevDependencies: true
+
+plugins:
+  - serverless-plugin-architecture
+
+# Can be set at custom level to avoid warnings
+#custom:
+  #architecture: arm64
+
+functions:
+  helloworld:
+    handler: helloworld.handler
+    # Can be overridden at function level too
+    # architecture: arm64

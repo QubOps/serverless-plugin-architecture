@@ -1,0 +1,25 @@
+{
+  "name": "serverless-plugin-architecture",
+  "version": "1.0.0",
+  "description": "Serverless Framework plugin to set architecture for AWS Lambda functions",
+  "main": "index.js",
+  "scripts": {
+    "lint": "biome lint",
+    "format": "biome format",
+    "biome": "biome lint --write && biome format --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "serverless": ">=1.70.0"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/qubops/serverless-plugin-architecture.git"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.2"
+  }
+}
